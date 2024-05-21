@@ -22,16 +22,17 @@ const createJob = async (req, res) => {
 
 const listJob = async (req, res) => {
   try {
-    const { minSalary, maxSalary } = req.query;
-    const jobsList = await JobModel.find({
-      $and: [{ salary: { $gte: minSalary } }, { salary: { $lte: maxSalary } }],
-    });
-    //   console.log(jobsList);
-    res.json({
-      success: true,
-      message: "List job api",
-      results: jobsList,
-    });
+    // const { minSalary, maxSalary } = req.query;
+    // const jobsList = await JobModel.find({
+    //   $and: [{ salary: { $gte: minSalary } }, { salary: { $lte: maxSalary } }],
+    // });
+    // //   console.log(jobsList);
+    // res.json({
+    //   success: true,
+    //   message: "List job api",
+    //   results: jobsList,
+    // });
+    let jobListName = JobModel.find()
   } catch (err) {
     res.json({
       success: false,
