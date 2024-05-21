@@ -27,7 +27,7 @@ const listJob = async (req, res) => {
     //   // $and: [{ salary: { $gte: minSalary } }, { salary: { $lte: maxSalary } }],
     // });
     //   // console.log(jobsList);
-    let jobListName = JobModel.find()
+    let jobListName = await JobModel.find()
     res.json({
       success: true,
       message: "List job api",
