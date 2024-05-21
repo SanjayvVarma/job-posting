@@ -35,6 +35,7 @@ const listJob = async (req, res) => {
     let jobListName = JobModel.find()
   } catch (err) {
     res.json({
+      results: jobListName,
       success: false,
       message: "Something went wrong, please try again after sometime",
     });
