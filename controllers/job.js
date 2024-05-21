@@ -24,20 +24,19 @@ const listJob = async (req, res) => {
   try {
     // const { minSalary, maxSalary } = req.query;
     // const jobsList = await JobModel.find({
-    //   $and: [{ salary: { $gte: minSalary } }, { salary: { $lte: maxSalary } }],
+    //   // $and: [{ salary: { $gte: minSalary } }, { salary: { $lte: maxSalary } }],
     // });
-    // //   console.log(jobsList);
-    // res.json({
-    //   success: true,
-    //   message: "List job api",
-    //   results: jobsList,
-    // });
+    //   // console.log(jobsList);
     let jobListName = JobModel.find()
+    res.json({
+      success: true,
+      message: "List job api",
+      results: jobListName,
+    });
   } catch (err) {
     res.json({
-      results: jobListName,
       success: false,
-      message: "Something went wrong, please try again after sometime",
+      message: "Something went wrong, please try again after sometime"
     });
   }
 };
